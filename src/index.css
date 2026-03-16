@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --sidebar-width: 280px;
+  --primary-indigo: #4f46e5;
+  --dark-navy: #0f172a;
+}
+
+/* Sidebar active item */
+.sidebar-item-active {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.2) 0%, rgba(79, 70, 229, 0) 100%);
+  border-right: 4px solid var(--primary-indigo);
+  color: white !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Glass card */
+.glass-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+/* Input focus ring */
+.input-focus-ring:focus {
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+  border-color: var(--primary-indigo);
+  outline: none;
+}
+
+/* Loading spinner */
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--primary-indigo);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar for sidebar */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 10px; }
